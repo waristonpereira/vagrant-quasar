@@ -30,3 +30,11 @@ expect {
     eof
 }
 '
+
+wget --quiet --output-document=tools.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+unzip -qq tools.zip -d $ANDROID_HOME
+echo y | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-22" --sdk_root=$ANDROID_HOME
+echo y | $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" --sdk_root=$ANDROID_HOME
+echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;22.0.1" --sdk_root=$ANDROID_HOME
+
+sudo apt-get -y install lib32stdc++6 lib32z1
