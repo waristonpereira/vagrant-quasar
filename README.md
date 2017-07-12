@@ -1,6 +1,8 @@
 # vagrant-ionic
 VagrantBox for VirtualBox
 
+Ready-to-go hybrid development environment for building mobile apps with Ionic, Cordova, and Android.
+
 Based on https://github.com/ionic-team/ionic-box
 
 Minor adjusts:
