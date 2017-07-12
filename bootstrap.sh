@@ -22,6 +22,8 @@ echo "PATH=$PATH:/opt/gradle/gradle-3.4.1/bin" >> /home/ubuntu/.bashrc
 echo "ANDROID_HOME=~/android-sdk-linux" >> /home/ubuntu/.bashrc
 echo "PATH=\$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools" >> /home/ubuntu/.bashrc
 
+sudo apt-get install expect
+
 expect -c '
 set timeout -1   ;
 spawn /home/ubuntu/android-sdk-linux/tools/android update sdk --no-ui --all --filter platform-tool,android-22,build-tools-22.0.1
@@ -31,10 +33,11 @@ expect {
 }
 '
 
-wget --quiet --output-document=tools.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
-unzip -qq tools.zip -d $ANDROID_HOME
-echo y | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-22" --sdk_root=$ANDROID_HOME
-echo y | $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" --sdk_root=$ANDROID_HOME
-echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;22.0.1" --sdk_root=$ANDROID_HOME
+sudo wget --quiet --output-document=tools.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+sudo unzip -qq tools.zip -d $ANDROID_HOME
+sudo echo y | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-22" --sdk_root=$ANDROID_HOME
+sudo echo y | $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" --sdk_root=$ANDROID_HOME
+sudo echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;22.0.1" --sdk_root=$ANDROID_HOME
 
 sudo apt-get -y install lib32stdc++6 lib32z1
+
