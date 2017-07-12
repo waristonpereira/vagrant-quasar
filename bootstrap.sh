@@ -41,3 +41,4 @@ sudo echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;22.0.1" --sdk_root
 
 sudo apt-get -y install lib32stdc++6 lib32z1
 
+sudo chown -R ubuntu android-sdk-linux/
