@@ -35,9 +35,9 @@ expect {
 
 sudo wget --quiet --output-document=tools.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
 sudo unzip -qq tools.zip -d ~/android-sdk-linux
-sudo echo y | ~/android-sdk-linux/tools/bin/sdkmanager "platforms;android-22" --sdk_root=$ANDROID_HOME
-sudo echo y | ~/android-sdk-linux/tools/bin/sdkmanager "platform-tools" --sdk_root=$ANDROID_HOME
-sudo echo y | ~/android-sdk-linux/tools/bin/sdkmanager "build-tools;22.0.1" --sdk_root=$ANDROID_HOME
+sudo echo y | ~/android-sdk-linux/tools/bin/sdkmanager "platforms;android-22" --sdk_root=~/android-sdk-linux
+sudo echo y | ~/android-sdk-linux/tools/bin/sdkmanager "platform-tools" --sdk_root=~/android-sdk-linux
+sudo echo y | ~/android-sdk-linux/tools/bin/sdkmanager "build-tools;22.0.1" --sdk_root=~/android-sdk-linux
 
 sudo apt-get -y install lib32stdc++6 lib32z1
 
