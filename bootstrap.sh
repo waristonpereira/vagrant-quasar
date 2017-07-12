@@ -18,7 +18,7 @@ sudo wget https://services.gradle.org/distributions/gradle-3.4.1-bin.zip
 sudo apt-get install -y unzip
 sudo unzip -d /opt/gradle gradle-3.4.1-bin.zip
 
-echo "PATH=$PATH:/opt/gradle/gradle-3.4.1/bin" >> /home/ubuntu/.bashrc
+echo "PATH=\$PATH:/opt/gradle/gradle-3.4.1/bin" >> /home/ubuntu/.bashrc
 echo "ANDROID_HOME=~/android-sdk-linux" >> /home/ubuntu/.bashrc
 echo "PATH=\$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools" >> /home/ubuntu/.bashrc
 
