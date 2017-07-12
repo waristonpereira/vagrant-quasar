@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 $init = <<SCRIPT
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb kill-server
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb start-server
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb devices
+sudo /home/ubuntu/android-sdk-linux/platform-tools/adb kill-server
+sudo /home/ubuntu/android-sdk-linux/platform-tools/adb start-server
+sudo /home/ubuntu/android-sdk-linux/platform-tools/adb devices
 SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
