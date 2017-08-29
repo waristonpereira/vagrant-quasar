@@ -8,9 +8,8 @@ sudo apt-get install -y openjdk-8-jdk openjdk-8-jre lib32stdc++6 lib32z1 expect 
 sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo npm install -g ionic cordova
-sudo curl -O $ANDROID_SDK
-sudo tar -xzf $ANDROID_SDK_FILENAME
-sudo chown -R ubuntu ~/android-sdk-linux/
+curl -O $ANDROID_SDK
+tar -xzf $ANDROID_SDK_FILENAME -C ~/
 sudo npm config set bin-links false -g
 
 sudo mkdir /opt/gradle
@@ -21,11 +20,11 @@ echo "PATH=\$PATH:/opt/gradle/gradle-3.4.1/bin" >> /home/ubuntu/.bashrc
 echo "ANDROID_HOME=~/android-sdk-linux" >> /home/ubuntu/.bashrc
 echo "PATH=\$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools" >> /home/ubuntu/.bashrc
 
+mkdir ~/.android/
 touch ~/.android/repositories.cfg
-sudo wget --quiet --output-document=tools.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
-sudo unzip -oqq tools.zip -d ~/android-sdk-linux
 
-sudo chown -R ubuntu ~/android-sdk-linux/
+wget --quiet --output-document=tools.zip https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+unzip -oqq tools.zip -d ~/android-sdk-linux
 
 expect -c '
 set timeout -1   ;
@@ -43,5 +42,3 @@ expect {
     eof
 }
 '
-
-sudo chown -R ubuntu ~/android-sdk-linux/
