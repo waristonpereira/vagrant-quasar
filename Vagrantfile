@@ -84,4 +84,7 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  
+  config.ssh.username = "vagrant"
+  config.ssh.password = "vagrant"
 end
