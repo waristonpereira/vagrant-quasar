@@ -7,7 +7,7 @@ apt-get update
 apt-get install -y openjdk-8-jdk openjdk-8-jre lib32stdc++6 lib32z1 expect unzip
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get install -y nodejs
-npm install -g ionic cordova
+npm install -g quasar-cli cordova
 curl -O $ANDROID_SDK
 tar -xzf $ANDROID_SDK_FILENAME -C /home/ubuntu/
 sudo npm config set bin-links false -g
